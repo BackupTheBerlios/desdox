@@ -12,13 +12,12 @@ inherit "/kernel/db_mapping";
 mixed query_attribute(string|int key)
 {
 werror("%s", this_user()->describe());
-    // Matrikel Nummer absichern:
-    if ( this_user() != CALLER ) {
-	// todo: add protection
-        steam_error ("No access to read MatrikelNr attribute"); 
-
-        return "No Access";
-    }
+//   Matrikel Nummer absichern:
+//   if ( this_user() != CALLER ) {
+//   todo: add protection
+//        steam_error ("No access to read MatrikelNr attribute"); 
+//        return "No Access";
+//    }
     if ( key == "MatrikelNr" ) {
 	int id = CALLER->get_object_id();
 	return get_value(id);
@@ -96,7 +95,7 @@ bool check_package_integrity()
   return true;
 }
 
-string get_version() { return "1.2"; }
+string get_version() { return "1.0"; }
 string get_identifier() { return "package:lecture"; }
 string get_table_name() { return "mnr"; }
 

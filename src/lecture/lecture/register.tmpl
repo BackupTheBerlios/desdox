@@ -23,10 +23,10 @@
 <TR><TD><B>Nickname:</B> <BR><SPAN CLASS="text10px">Einen einfachen Namen aussuchen</SPAN></TD><TD><INPUT TYPE="TEXT" NAME="nickname" SIZE="8" MAXLENGTH="12"></TD></TR>
 <TR><TD><B>Name:</B> <BR><SPAN CLASS="text10px">Zuname (z.B. Mustermann)</SPAN></TD><TD><INPUT TYPE="TEXT" NAME="fullname" SIZE="25" MAXLENGTH="40"></TD></TR>
 <TR><TD><B>Vorname:</B> <BR><SPAN CLASS="text10px">Vorname (z.B. Hans)</SPAN></TD><TD><INPUT TYPE="TEXT" NAME="firstname" SIZE="25" MAXLENGTH="40"></TD></TR>
-<TR><TD><B>E-Mail:</B> </TD><TD><INPUT TYPE="TEXT" NAME="email" SIZE="25" MAXLENGTH="40"></TD></TR><TR VALIGN="TOP"><TD><B>Matrikelnummer:</B> <BR><SPAN CLASS="text10px"></SPAN></TD><TD><INPUT TYPE="TEXT" NAME="mnr" VALUE="" SIZE="7" MAXLENGTH="7"></TD></TR><TR VALIGN="TOP"><TD><B>Studiengang:</B><BR><SPAN CLASS="text10px"></SPAN></TD><TD><INPUT TYPE="TEXT" NAME="studiengang" VALUE="{def_studiengang}" SIZE="20" MAXLENGTH="20"></TD></TR><TR><TD><B>Passwort:</B> <br><SPAN CLASS="text10px">mindestens <B>6 Zeichen</B></SPAN></TD><TD><INPUT TYPE="PASSWORD" NAME="pw" SIZE="12" MINLENGTH="6"></TD></TR><TR><TD><B>Password Wiederholung:</B></TD><TD><INPUT type="password" name="pw_repeat" SIZE="12"/></TD></TR>
+<TR><TD><B>E-Mail:</B> </TD><TD><INPUT TYPE="TEXT" NAME="email" SIZE="25" MAXLENGTH="40"></TD></TR><TR VALIGN="TOP"><TD><B>Matrikelnummer:</B> <BR><SPAN CLASS="text10px"></SPAN></TD><TD><INPUT TYPE="TEXT" NAME="mnr" VALUE="" SIZE="7" MAXLENGTH="7"></TD></TR>
+<TR VALIGN="TOP"><TD><B>Studiengang:</B><BR><SPAN CLASS="text10px"></SPAN></TD><TD>
 
-<!--{SELECT_GROUP}  -->
-<SELECT size="1" name="Auswahlliste Studiengang">
+<SELECT size="1" name="studiengang">
 <option>Wirtschaftsinformatik DPO 98</option>
 <option>Systems Engineering BPO 2000</Option>
 <option>Systems Engineering BPO 2003</option>
@@ -36,6 +36,10 @@
 <option>Sonstige</option>
 
 </SELECT>
+
+</TD></TR><TR><TD><B>Passwort:</B> <br><SPAN CLASS="text10px">mindestens <B>6 Zeichen</B></SPAN></TD><TD><INPUT TYPE="PASSWORD" NAME="pw" SIZE="12" MINLENGTH="6"></TD></TR><TR><TD><B>Password Wiederholung:</B></TD><TD><INPUT type="password" name="pw_repeat" SIZE="12"/></TD></TR>
+
+{SELECT_GROUP}
 
 <TR><TD COLSPAN="2"><BR><BR>&nbsp;&nbsp;&nbsp;&nbsp;<INPUT TYPE="SUBMIT" VALUE="&nbsp;&nbsp;&nbsp;&nbsp;Login anlegen&nbsp;&nbsp;&nbsp;&nbsp;" onSubmit="check_register()"></TD></TR></TABLE><BR><BR></TD></TR></TABLE></FORM></BODY></HTML>
 

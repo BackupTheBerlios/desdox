@@ -10,15 +10,13 @@ execute(mapping vars) {
     html = "<html><head><title>Test</title>\n </head> \n <body>\n";
 	html += "Aufgerufen von der Seite: " + this_user()->get_last_trail()->query_attribute(102) +"<br><br>" ;				
 	if  (get_group_by_location () != null) {
-		html += "Die aktuelle Gruppe ist: " + get_group_by_location ()->query_attribute(102) + " (wird das Skript aus einer \n<br>Untergruppe aufgerufen, wird die Obergruppe angegeben) und hat " + (sizeof (get_group_by_location()->get_members()) -1) + " Mitglied(er). <br><br>\n";
+		html += "Die aktuelle Gruppe ist: " + get_group_by_location ()->query_attribute(102) + " (wird das Skript aus einer \n<br>Untergruppe aufgerufen, wird die Obergruppe angegeben) und hat " + sizeof (get_group_by_location()->get_members(CLASS_USER))  + " Mitglied(er). <br><br>\n";
 		html += "Caller ist: " +CALLER->describe() + "<br><br>";
 		
-		array (object) members = get_group_by_location () ->get_members();
+		array (object) members = get_group_by_location () ->get_members(CLASS_USER);
 		
 			if (sizeof (members) != 0) {
 			            html += "<table border=1\n><tr><td>Nr</td><td>Name:</td><td>Vorname</td><td>Matrikelnr.</td></tr>\n";
-				 // i auf "1" setzten, da sonst das erste Mitglied die >Gruppe< der Tutoren ist!
-			     i++;
 				do {
 						html += "<tr>\n<td>" + i + "</td>" 
 						     + "<td> "  + members [i]->query_attribute(612)                 +"</td>"

@@ -1,0 +1,9 @@
+#!/bin/sh
+mkdir files || true
+mkdir files/lecture || true
+cp setup.* files/lecture/
+cp start.html files/lecture/
+cp -rf lecture files/lecture/
+cp -rf images files/lecture/
+tar -czf lecture.spm.gz package/lecture.pike files/ xml/ --exclude=CVS --exclude=.cvsignore
+rm -rf files

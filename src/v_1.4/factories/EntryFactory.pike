@@ -16,7 +16,6 @@
  */
 inherit "/factories/ObjectFactory";
 
-// Wir wissen nicht wirklich welche includes werden muessen.
 #include <macros.h>
 #include <classes.h>
 #include <database.h>

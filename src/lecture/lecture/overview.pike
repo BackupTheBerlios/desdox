@@ -38,7 +38,7 @@ mixed execute(mapping vars)
 	 foreach(do_query_attribute("gruppen"), object grp ) {
 	    html +=
 		"<li><a href=//"+_Server->query_config(CFG_WEBSERVER)+":"+
-		_Server->query_config(CFG_WEBPORT_HTTP)+"/scripts/navigate.pike?object="+
+		"/scripts/navigate.pike?object="+
 		grp->get_object_id()+"/>"+grp->get_identifier()+"</a> &#160;&#160;"+
 		"Tutor: "+make_selection("tutor_"+grp->get_object_id(),do_query_attribute("tutor_group"), do_query_attribute("tutor"))+"&#160;&#160; Raum: <input type='text' name='raum_"+grp->get_object_id()+"' value='"+grp->query_attribute("raum")+"'/> &#160; &#160; Zeit: <input type='text' name='zeit_"+grp->get_object_id()+"' value='"+grp->query_attribute("zeit")+"'/></li>";
 	  }

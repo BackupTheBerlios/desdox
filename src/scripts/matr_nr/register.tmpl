@@ -1,0 +1,39 @@
+<HTML>
+<HEAD>
+    <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+	<TITLE>Anmeldung: {text_veranstaltung_beschreibung}</TITLE>
+    <LINK HREF="/gui_css/winstyle2_ie5.css" REL="stylesheet">
+</HEAD>
+<BODY BGCOLOR="#FFFFFF" LINK="#000000" VLINK="#000000" ALINK="#000000">
+
+<!-- Steamleiste -->
+<FORM NAME="register" ACTION="/scripts/" OnSubmit="return check_register(this);" method="POST">
+<INPUT type="hidden" name="_action" value="register">
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" WIDTH="785" ALIGN="CENTER">
+<TR><TD><IMG WIDTH="785" BORDER="0" HEIGHT="75" SRC="/images/kopfleiste_big.jpg"></TD></TR>
+</TABLE>
+
+<!-- Admin-Funktionen -->
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" WIDTH="785" ALIGN="CENTER" CLASS="bgbrowser">
+<TR VALIGN="BOTTOM" CLASS="tabhead"><TD CLASS="header"><BR>&nbsp;Anmeldung: {text_veranstaltung_beschreibung}</TD></TR>
+<TR VALIGN="TOP"><TD><BR><TABLE BORDER="0" CELLPADDING="5" CELLSPACING="0">
+
+<TR VALIGN="TOP"><TD><B>Matrikelnummer:</B> <BR><SPAN CLASS="text10px"></SPAN></TD><TD><INPUT TYPE="TEXT" NAME="mnr" VALUE="" SIZE="7" MAXLENGTH="7"></TD></TR>
+<TR VALIGN="TOP"><TD><B>Studiengang:</B><BR><SPAN CLASS="text10px"></SPAN></TD><TD>
+
+<SELECT size="1" name="studiengang">
+<option>Wirtschaftsinformatik DPO 98</option>
+<option>Systems Engineering BPO 2000</Option>
+<option>Systems Engineering BPO 2003</option>
+<option>BWL DPO 98</option>
+<option>Kommunikationswissenschaft</option>
+<option>Medizin-Management</option>
+<option>Sonstige</option>
+
+</SELECT>
+
+</TD></TR><TR><TD><B>Passwort:</B> </SPAN></TD><TD><INPUT TYPE="PASSWORD" NAME="pw" SIZE="12" MINLENGTH="6"></TD></TR><TR><TD><B>Password Wiederholung:</B></TD><TD><INPUT type="password" name="pw_repeat" SIZE="12"/></TD></TR>
+
+<TR><TD COLSPAN="2"><BR><BR>&nbsp;&nbsp;&nbsp;&nbsp;<INPUT TYPE="SUBMIT" VALUE="&nbsp;&nbsp;&nbsp;&nbsp;Login anlegen&nbsp;&nbsp;&nbsp;&nbsp;" onSubmit="check_register()"></TD></TR></TABLE><BR><BR></TD></TR></TABLE></FORM></BODY></HTML>
+
+

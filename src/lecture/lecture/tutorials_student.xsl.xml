@@ -1,0 +1,128 @@
+<structure>
+  <class type="1">
+    <tag name="name">
+      <call><f><n>get_identifier</n></f></call>
+      <show/>
+    </tag>
+    <tag name="URL">
+      <call><f><n>get_identifier</n></f></call>
+      <show><f><n>no_uml</n></f></show>
+    </tag>
+    <tag name="description">
+      <call><f><n>query_attribute</n><p><int>104</int></p></f></call>
+      <show/>
+    </tag>
+    <tag name="abgabe">
+  <call><f><n>query_attribute</n><p><string>lecture:num</string></p></f></call>
+  <show><f><n>show</n></f></show>	   
+  </tag>    
+    <tag name="abgabe_ende">
+  <call><f><n>query_attribute</n><p><string>lecture:end</string></p></f></call>
+  <show><f><n>get_time</n></f></show>	   
+  </tag>    
+  <tag name="types">
+      <call><f><n>query_attribute</n><p><int>xsl:content</int></p></f></call>
+      <show><f><n>show</n></f></show>
+    </tag>
+    <tag name="environment">
+      <call><f><n>get_environment</n><p/></f></call>
+      <show><f><n>show</n></f></show>
+    </tag>
+    <tag name="id">
+      <call><f><n>get_object_id</n><p/></f></call>
+      <show/>
+    </tag>
+    <tag name="modified-by">
+      <call><f><n>query_attribute</n><p><int>213</int></p></f></call>
+      <show><f><n>show</n></f></show>
+    </tag>    
+    <tag name="owner">
+      <call><f><n>get_creator</n><p/></f></call>
+      <show><f><n>show</n></f></show>
+    </tag>
+    <tag name="annotated">
+      <call><f><n>get_annotations</n><p/></f></call>
+      <show><f><n>show_size</n></f></show>
+    </tag>
+    <tag name="tutors">
+      <call><f><o>group:eim03-admin</o><n>get_members</n></f></call>
+      <show><f><n>show</n></f></show>
+    </tag>
+    <tag name="punkte">
+      <call><f><o>orb:/home/eim03-admin/lecture/lecture</o><n>get_my_punkte</n><p></p></f></call>
+      <show><f><n>show</n></f></show>
+    </tag>
+    <tag name="path">
+      <call><f><o>CONV</o><n>get_path</n><p><o>THIS</o></p></f></call>
+      <show/>
+    </tag>
+    <tag name="user">
+      <call><f><o>master</o><n>this_user</n></f></call>
+      <show><map><def>users</def>
+      <class type="1">
+          <tag name="groups">
+	  <call><f><n>get_groups</n></f></call>
+	  <show><f><n>show</n></f></show>
+	  </tag>
+	  <tag name="matrikelnr">
+	  <call><f><n>query_attribute</n><p><string>MatrikelNr</string></p></f></call>
+	  <show />
+	  </tag>
+      </class>
+      </map></show>
+    </tag>
+    <tag name="created">
+      <call><f><n>query_attribute</n><p><int>119</int></p></f></call>
+      <show><f><n>get_time</n></f></show>
+    </tag>
+  </class>
+  <class type="2">
+    <tag name="inventory">
+      <call><f><o>CONV</o><n>get_filtered_inventory</n><p><o>THIS</o><string>lecture:group</string><o>THIS_USER</o></p></f></call>
+      <show><map>
+        <def>objects</def>
+	<class type="Container">
+	<tag name="abgabe">
+	  <call><f><n>query_attribute</n><p><string>lecture:num</string></p></f></call>
+	  <show><f><n>show</n></f></show>	   
+	</tag>
+	<tag name="group">
+	  <call><f><n>query_attribute</n><p><string>lecture:group</string></p></f></call>
+	  <show><f><n>show</n></f></show>	   
+	</tag>
+	</class>
+        <class type="Document">
+	  <tag name="group">
+	        <call><f><n>query_attribute</n><p><string>lecture:group</string></p></f></call>
+		<show><f><n>show</n></f></show>	   
+	  </tag>
+	  <tag name="assess">
+	      <call><f><n>query_attribute</n><p><string>lecture:assessment</string></p></f></call>
+	      <show>
+	      <map>
+	      <class type="Object">
+	        <tag name="object">
+		  <call><f><o>CONV</o><n>show</n><p><o>THIS</o></p></f></call>
+		  <show/>
+		</tag>
+		<tag name="creator">
+		  <call><f><n>get_creator</n></f></call>
+		  <show><f><n>show</n></f></show>
+		</tag>
+	      </class>
+	      </map>
+	      </show>
+          </tag>
+	</class>
+      </map></show>
+    </tag>
+    <tag name="sort-exits">
+      <call><f><n>query_attribute</n><p><string>web:sort:exits</string></p></f></call>
+      <show/>
+    </tag>
+    <tag name="sort-objects">
+      <call><f><n>query_attribute</n><p><string>web:sort:objects</string></p></f></call>
+      <show/>
+    </tag>
+  </class>
+</structure>

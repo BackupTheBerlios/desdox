@@ -1,0 +1,141 @@
+<structure>
+  <class type="Object">
+    <tag name="name">
+      <call><f><n>get_identifier</n></f></call>
+      <show/>
+    </tag>
+    <tag name="URL">
+      <call><f><n>get_identifier</n></f></call>
+      <show><f><n>no_uml</n></f></show>
+    </tag>
+    <tag name="description">
+      <call><f><n>query_attribute</n><p><int>104</int></p></f></call>
+      <show/>
+    </tag>
+    <tag name="icon">
+      <call><f><n>query_attribute</n><p><int>105</int></p></f></call>
+      <show><f><n>show</n></f></show>  
+    </tag>
+    <tag name="last-modified">
+      <call><f><n>query_attribute</n><p><int>116</int></p></f></call>
+      <show><f><n>get_time</n></f></show>
+    </tag>
+    <tag name="acquires">
+      <call><f><n>get_acquire</n><p/></f></call>
+      <show><f><n>describe_acquire</n></f></show>
+    </tag>
+    <tag name="types">
+      <call><f><n>query_attribute</n><p><int>xsl:content</int></p></f></call>
+      <show><f><n>show</n></f></show>
+    </tag>
+    <tag name="start_date">
+      <call><f><n>query_attribute</n><p><string>lecture:date</string></p></f></call>
+      <show><f><n>get_time</n></f></show>
+    </tag>
+    <tag name="environment">
+      <call><f><n>get_environment</n><p/></f></call>
+      <show><f><n>show</n></f></show>
+    </tag>
+    <tag name="id">
+      <call><f><n>get_object_id</n><p/></f></call>
+      <show/>
+    </tag>
+    <tag name="abgabe_ende">
+  <call><f><n>query_attribute</n><p><string>lecture:end</string></p></f></call>
+  <show><f><n>get_time</n></f></show>	   
+  </tag>    
+	<tag name="abgabe">
+	  <call><f><n>query_attribute</n><p><string>lecture:num</string></p></f></call>
+	  <show><f><n>show</n></f></show>	   
+	</tag>
+    <tag name="modified-by">
+      <call><f><n>query_attribute</n><p><int>213</int></p></f></call>
+      <show><f><n>show</n></f></show>
+    </tag>    
+    <tag name="owner">
+      <call><f><n>get_creator</n><p/></f></call>
+      <show><f><n>show</n></f></show>
+    </tag>
+    <tag name="annotated">
+      <call><f><n>get_annotations</n><p/></f></call>
+      <show><f><n>show_size</n></f></show>
+    </tag>
+    <tag name="content">
+      <call><f><o>CONV</o><n>show_content</n><p><o>THIS</o></p></f></call>
+      <show/>
+    </tag>
+    <tag name="path">
+      <call><f><o>CONV</o><n>get_path</n><p><o>THIS</o></p></f></call>
+      <show/>
+    </tag>
+    <tag name="user">
+      <call><f><o>master</o><n>this_user</n></f></call>
+      <show><map><def>users</def>
+      <class type="1">
+          <tag name="groups">
+	  <call><f><n>get_groups</n></f></call>
+	  <show><f><n>show</n></f></show>
+	  </tag>
+      </class>
+      </map></show>
+    </tag>
+    <tag name="created">
+      <call><f><n>query_attribute</n><p><int>119</int></p></f></call>
+      <show><f><n>get_time</n></f></show>
+    </tag>
+    <tag name="exercise">
+      <call><f><n>get_environment</n></f></call>
+      <show><map>
+        <class type="1">
+	 <tag name="group">
+	  <call><f><n>get_creator</n></f></call>
+	  <show><f><n>show</n></f></show>
+	 </tag>
+	</class>
+      </map></show>
+    </tag>
+  </class>
+  <class type="Container">
+    <tag name="inventory">
+      <call><f><o>CONV</o><n>get_filtered_inventory</n><p><o>THIS</o><string>lecture:tutor</string><o>THIS_USER</o></p></f></call>
+      <show><map>
+        <def>objects</def>
+	<class type="Container">
+	<tag name="abgabe">
+	  <call><f><n>query_attribute</n><p><string>lecture:num</string></p></f></call>
+	  <show><f><n>show</n></f></show>	   
+	</tag>
+	</class>
+        <class type="16">
+	  <tag name="group">
+	        <call><f><n>query_attribute</n><p><string>lecture:group</string></p></f></call>
+		<show><f><n>show</n></f></show>	   
+	  </tag>
+	  <tag name="status">
+	    <call><f><n>query_attribute</n><p><string>lecture:status</string></p></f></call>
+	    <show><f><n>show</n></f></show>
+	  </tag>
+	  <tag name="tutor">
+	      <call><f><n>query_attribute</n><p><string>lecture:tutor</string></p></f></call>
+	      <show><f><n>show</n></f></show>
+	  </tag>
+	  <tag name="assess">
+	      <call><f><n>query_attribute</n><p><string>lecture:assessment</string></p></f></call>
+	      <show><f><n>show</n></f></show>
+          </tag>
+	</class>
+      </map></show>
+    </tag>
+    <tag name="sort-exits">
+      <call><f><n>query_attribute</n><p><string>web:sort:exits</string></p></f></call>
+      <show/>
+    </tag>
+    <tag name="sort-objects">
+      <call><f><n>query_attribute</n><p><string>web:sort:objects</string></p></f></call>
+      <show/>
+    </tag>
+  </class>
+</structure>
+
+
+

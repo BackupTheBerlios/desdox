@@ -1,0 +1,133 @@
+<structure>
+  <class type="Object">
+    <tag name="name">
+      <call><f><n>get_identifier</n></f></call>
+      <show/>
+    </tag>
+    <tag name="URL">
+      <call><f><n>get_identifier</n></f></call>
+      <show><f><n>no_uml</n></f></show>
+    </tag>
+    <tag name="description">
+      <call><f><n>query_attribute</n><p><int>104</int></p></f></call>
+      <show/>
+    </tag>
+    <tag name="environment">
+      <call><f><n>get_environment</n><p/></f></call>
+      <show><f><n>show</n></f></show>
+    </tag>
+    <tag name="id">
+      <call><f><n>get_object_id</n><p/></f></call>
+      <show/>
+    </tag>
+    <tag name="user">
+      <call><f><o>master</o><n>this_user</n></f></call>
+      <show><map><def>users</def></map></show>
+    </tag>
+    <tag name="useraccess">
+       <call><f><o>CONV</o><n>get_basic_access</n><p><o>THIS</o></p></f></call>
+       <show/>
+    </tag>
+    <tag name="owner">
+      <call><f><n>get_creator</n><p/></f></call>
+      <show><f><n>show</n></f></show>
+    </tag>
+    <tag name="index">
+      <call><f><n>get_object_byname</n><p><string>start.html</string></p></f></call>
+      <show><f><n>get_obj_content</n></f></show>
+    </tag>
+    <tag name="header">
+      <call><f><n>get_object_byname</n><p><string>header.html</string></p></f></call>
+      <show><f><n>get_obj_content</n></f></show>
+    </tag>
+    <tag name="path">
+      <call><f><o>CONV</o><n>get_path</n><p><o>THIS</o></p></f></call>
+      <show/>
+    </tag>
+  </class>
+  <class type="Container">
+    <tag name="inventory">
+      <call><f><n>get_inventory</n></f></call>
+      <show>
+<map>
+      <class type="1">
+    <tag name="description">
+      <call><f><n>query_attribute</n><p><int>104</int></p></f></call>
+      <show/>
+    </tag>
+    <tag name="URL">
+      <call><f><n>get_identifier</n></f></call>
+      <show><f><n>no_uml</n></f></show>
+    </tag>
+    <tag name="icon">
+      <call><f><n>query_attribute</n><p><int>105</int></p></f></call>
+      <show><f><n>show</n></f></show>  
+    </tag>    <tag name="name">
+      <call><f><n>get_identifier</n></f></call>
+      <show/>
+    </tag>
+    <tag name="id">
+      <call><f><n>get_object_id</n><p/></f></call>
+      <show/>
+    </tag>
+    <tag name="content">
+      <call><f><o>CONV</o><n>show_content</n><p><o>THIS</o></p></f></call>
+      <show/>
+    </tag>
+    </class>   
+    <class type="DocExtern">
+    <tag name="url">
+	        <call><f><n>query_attribute</n><p><int>216</int></p></f></call>
+		<show><f><n>show</n></f></show>	   
+    </tag>
+    </class>
+      </map></show>
+    </tag>
+  </class>
+  <language name="german">
+  <term name="NEW">Neues</term>
+  <term name="NEW2">Neuer</term>
+  <term name="ODOCUMENT">Dokument</term>
+  <term name="OCONTAINER">Ordner</term>
+  <term name="text_veranstaltung_beschreibung">{text_veranstaltung_beschreibung}</term>
+  <term name="text_fakultaet">{text_fakultaet}</term>
+  <term name="text_Arbeitsgruppe">{text_Arbeitsgruppe}</term>
+<term name="veranstaltung_url">{veranstaltung_url}</term>
+<term name="veranstaltung_name">{veranstaltung_name}</term>
+<term name="def_studiengang">{def_studiengang}</term>
+<term name="opt_nav_Uebungen"><![CDATA[<img src="{veranstaltung_url}/images/Uebungen.gif" border="0"/>]]></term>
+<term name="opt_nav_Login"><![CDATA[<img src="{veranstaltung_url}/images/Login.gif" border="0"/>]]></term>
+<term name="opt_nav_Vorlesungen"><![CDATA[<img src="{veranstaltung_url}/images/Vorlesungen.gif" border="0"/>]]></term>
+<term name="opt_nav_Anmeldung"><![CDATA[<img src="{veranstaltung_url}/images/Anmeldung.gif" border="0"/>]]></term>
+<term name="opt_nav_generic1"/>
+<term name="opt_nav_generic2"/>
+<term name="opt_nav_generic3"/>
+<term name="opt_text_generic1"/>
+<term name="opt_text_generic2"/>
+<term name="opt_text_generic3"/>
+  </language>
+  <language name="english">
+  <term name="NEW">Neues</term>
+  <term name="NEW2">Neuer</term>
+  <term name="ODOCUMENT">Dokument</term>
+  <term name="OCONTAINER">Ordner</term>
+  <term name="text_veranstaltung_beschreibung">{text_veranstaltung_beschreibung}</term>
+  <term name="text_fakultaet">{text_fakultaet}</term>
+  <term name="text_Arbeitsgruppe">{text_Arbeitsgruppe}</term>
+<term name="veranstaltung_url">{veranstaltung_url}</term>
+<term name="veranstaltung_name">{veranstaltung_name}</term>
+<term name="def_studiengang">{def_studiengang}</term>
+<term name="opt_nav_Uebungen"><![CDATA[<img src="{veranstaltung_url}images/Uebungen.gif" border="0"/>]]></term>
+<term name="opt_nav_Login"><![CDATA[<img src="{veranstaltung_url}images/Login.gif" border="0"/>]]></term>
+<term name="opt_nav_Vorlesungen"><![CDATA[<img src="{veranstaltung_url}images/Vorlesungen.gif" border="0"/>]]></term>
+<term name="opt_nav_Anmeldung"><![CDATA[<img src="{veranstaltung_url}images/Anmeldung.gif" border="0"/>]]></term>
+<term name="opt_nav_generic1"/>
+<term name="opt_nav_generic2"/>
+<term name="opt_nav_generic3"/>
+<term name="opt_text_generic1"/>
+<term name="opt_text_generic2"/>
+<term name="opt_text_generic3"/>
+  </language>
+</structure>
+
+
